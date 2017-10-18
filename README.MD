@@ -6,6 +6,10 @@
 $ npm install --save react-thermometer-component
 ```
 
+# View demo
+
+https://zamarrowski.github.io/react-thermometer-component/
+
 ## Usage
 
 ```js
