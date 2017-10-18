@@ -34,7 +34,7 @@ render(
 ## API:
 
 | Param | Type | Description | Example | Default |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | `theme` | `String` | Light or Dark | `theme="light"` | light |
 | `value` | `Number` | Temperature value | `value={27}` | 0 |
 | `max` | `Number` | Maximum value of thermometer | `max={100}` | 100 |
