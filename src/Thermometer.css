@@ -206,7 +206,7 @@
     bottom: 0;
     left: initial;
     width: 100%;
-    background: linear-gradient(#2196F3, #8BC34A, #f44336); }
+    background: linear-gradient(#f44336, #8bc34a, #2196f3); }
   .thermometer .thermometer__percent-current {
     position: absolute;
     top: 4px;
@@ -265,7 +265,7 @@
     margin: auto;
     z-index: 1; }
     .thermometer .thermometer__draw-b:after {
-      background-color: #f44336;
+      background-color: #2196f3;
       border-radius: 50%; }
     .thermometer .thermometer__draw-b:before {
       position: absolute;
@@ -274,5 +274,5 @@
       bottom: 40px;
       left: 0;
       height: 20px;
-      background-color: #f44336;
+      background-color: #2196f3;
       border-radius: 50px 50px 0 0; }
