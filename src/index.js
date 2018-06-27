@@ -43,7 +43,7 @@ class Thermometer extends Component {
       height: this.props.height || 200, //default 200
       valstr: () => this.options.value + this.options.format,
       percent: () => this.options.value / this.options.max * 100,
-      reverseGradient: this.props.reverseGradient === 'true' ? true : false, // default false
+      reverseGradient: this.props.reverseGradient || false, // default false
       intervals: []
     }
   }
