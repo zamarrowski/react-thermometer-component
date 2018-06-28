@@ -1,7 +1,7 @@
 .thermometer .thermometer__mercury {
   transition: all .5s ease-in-out; }
 
-.thermometer .thermometer__percent-current:before, .thermometer .thermometer__percent-current:after, .thermometer .thermometer__draw-b:after, .thermometer .thermometer__draw-b:before {
+.thermometer .thermometer__percent-current:before, .thermometer .thermometer__percent-current:after, .thermometer .thermometer__draw-b:after, .thermometer__draw-bReverse:after, .thermometer .thermometer__draw-b:before, .thermometer__draw-bReverse:before {
   content: "";
   margin: auto; }
 
@@ -46,6 +46,18 @@
   width: 24px;
   height: 24px; }
 
+.thermometer--small .thermometer__draw-bReverse:before {
+  width: 4px; }
+
+.thermometer--small .thermometer__draw-bReverse:after {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  width: 24px;
+  height: 24px; }
+
 .thermometer--small .thermometer__meter {
   width: 4px; }
 
@@ -76,6 +88,18 @@
   width: 34px;
   height: 34px; }
 
+.thermometer--normal .thermometer__draw-bReverse:before {
+  width: 10px; }
+
+.thermometer--normal .thermometer__draw-bReverse:after {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  width: 34px;
+  height: 34px; }
+
 .thermometer--normal .thermometer__meter {
   width: 10px; }
 
@@ -98,6 +122,18 @@
   width: 30px; }
 
 .thermometer--large .thermometer__draw-b:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  width: 50px;
+  height: 50px; }
+
+.thermometer--large .thermometer__draw-bReverse:before {
+  width: 30px; }
+
+.thermometer--large .thermometer__draw-bReverse:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -207,6 +243,14 @@
     left: initial;
     width: 100%;
     background: linear-gradient(#2196F3, #8BC34A, #f44336); }
+  .thermometer .thermometer__bg-colorReverse {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: 0;
+    left: initial;
+    width: 100%;
+    background: linear-gradient(#f44336, #8bc34a, #2196f3); }
   .thermometer .thermometer__percent-current {
     position: absolute;
     top: 4px;
@@ -275,4 +319,26 @@
       left: 0;
       height: 20px;
       background-color: #f44336;
+      border-radius: 50px 50px 0 0; }
+  .thermometer .thermometer__draw-bReverse {
+    position: absolute;
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    z-index: 1; }
+    .thermometer .thermometer__draw-bReverse:after {
+      background-color: #2196f3;
+      border-radius: 50%; }
+    .thermometer .thermometer__draw-bReverse:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 40px;
+      left: 0;
+      height: 20px;
+      background-color: #2196f3;
       border-radius: 50px 50px 0 0; }
