@@ -32,7 +32,7 @@ render(
 
 ### Browserify
 
-[`browserify`](https://npmjs.com/packages/browserify) is supported, but you have to install [`browserify-css@^0.12.0`](https://npmjs.com/packages/browserify-css) manually.
+[`browserify`](https://npmjs.com/package/browserify) is supported, but you have to install [`browserify-css@^0.12.0`](https://npmjs.com/package/browserify-css) manually.
 
 
 ## API:
@@ -50,4 +50,4 @@ render(
 
 # Contributors
 
-I have made improvements to this component. The original component is http://www.interaminense.com/react-ui-thermomete.
+I have made improvements to this component. The original component is http://www.interaminense.com/react-ui-thermometer/.
