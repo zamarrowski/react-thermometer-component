@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "author": "zamarrowski",
   "license": "ISC",
+  "types": "lib/index.d.ts",
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
