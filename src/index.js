@@ -16,24 +16,25 @@ class Thermometer extends Component {
     const stepIntervals = this._createIntervalsUI(this.options.intervals)
 
     return (
-      <div style={height} className={`thermometer ${size} ${theme}`}>
-        <div className="thermometer__draw-a"></div>
-        <div className={`thermometer__draw-b${reverse}`}></div>
-        <div className="thermometer__meter">
-          <ul className="thermometer__statistics">{stepIntervals}</ul>
-          <div style={heightPercent} className="thermometer__mercury">
-            <div className="thermometer__percent-current">{valstr}</div>
-            <div className="thermometer__mask">
-              <div className={`thermometer__bg-color${reverse}`} style={heightBgColor}></div>
+        <div style={Object.assign({}, height, this.options.containerStyle)} className={`thermometer ${size} ${theme}`}>
+          <div className="thermometer__draw-a"></div>
+          <div className={`thermometer__draw-b${reverse}`}></div>
+          <div className="thermometer__meter">
+            <ul className="thermometer__statistics">{stepIntervals}</ul>
+            <div style={heightPercent} className="thermometer__mercury">
+              <div className="thermometer__percent-current">{valstr}</div>
+              <div className="thermometer__mask">
+                <div className={`thermometer__bg-color${reverse}`} style={heightBgColor}></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     )
   }
 
   _generateOptions() {
     return {
+      containerStyle: this.props.style || {},
       theme: () => this.props.theme === 'light' || this.props.theme === 'dark' ? this.props.theme : 'light',
       value: this.props.value || 0, //default 0
       max: this.props.max || 100, //default 100
@@ -62,9 +63,9 @@ class Thermometer extends Component {
   _createIntervalsUI(intervals) {
     return intervals.map((step, i) => {
       return (
-        <li key={i} style={{ bottom: `calc(${step.percent}% - 1px)` }}>
-          {step.label}
-        </li>
+          <li key={i} style={{ bottom: `calc(${step.percent}% - 1px)` }}>
+            {step.label}
+          </li>
       )
     })
   }
